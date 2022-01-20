@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Plus</title>
+    <link rel="stylesheet" href="./calculator.css">
+
+</head>
+
+<body>
+    <header>
+        <h1>Calculator plus</h1>
+    </header>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="5"><input id="display" type="text"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input class="calcButton" type="button" value="x&sup2" onclick="displayF('&sup2')"></td>
+                    <td><input class="calcButton" type="button" value="&radic;" onclick="displayF('&radic;(')"></td>
+                    <td><input class="calcButton" type="button" value="(" onclick="displayF('(')"></td>
+                    <td><input class="calcButton" type="button" value=")" onclick="displayF(')')"></td>
+                    <td><input class="calcButton" type="button" value="fct" onclick="fct()"></td>
+                </tr>
+                <tr>
+                    <td><input class="calcButton" type="button" value="7" onclick="displayF('7')"></td>
+                    <td><input class="calcButton" type="button" value="8" onclick="displayF('8')"></td>
+                    <td><input class="calcButton" type="button" value="9" onclick="displayF('9')"></td>
+                    <td><input class="calcButton" type="button" value="&times" onclick="displayF('&times')"></td>
+                    <td><input class="calcButton" id="clearb" type="button" value="C" onclick="clr()"></td>
+                </tr>
+                <tr>
+                    <td><input class="calcButton" type="button" value="4" onclick="displayF('4')"></td>
+                    <td><input class="calcButton" type="button" value="5" onclick="displayF('5')"></td>
+                    <td><input class="calcButton" type="button" value="6" onclick="displayF('6')"></td>
+                    <td><input class="calcButton" type="button" value="-" onclick="displayF('-')"></td>
+                    <td><input class="calcButton" type="button" value="&divide r" onclick="displayF('&divide'+'r')"></td>
+                </tr>
+                <tr>
+                    <td><input class="calcButton" type="button" value="1" onclick="displayF('1')"></td>
+                    <td><input class="calcButton" type="button" value="2" onclick="displayF('2')"></td>
+                    <td><input class="calcButton" type="button" value="3" onclick="displayF('3')"></td>
+                    <td><input class="calcButton" type="button" value="+" onclick="displayF('+')"></td>
+                    <td><input class="calcButton" type="button" value="&divide" onclick="displayF('&divide')"></td>
+                </tr>
+                <tr>
+                    <td><input class="calcButton" type="button" value="0" onclick="displayF('0')"></td>
+                    <td><input class="calcButton" type="button" value="." onclick="displayF('.')"></td>
+                    <td><input class="calcButton" type="button" value="&pi;" onclick="displayF('&pi;')"></td>
+                    <td><input class="calcButton" id="equalb" type="button" value="=" onclick="calc()"></td>
+                    <td><input class="calcButton" type="button" value="ANS" onclick="displayF('ANS')"></td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="instructions">
+            <h2>Instructions</h2>
+            <div id="lists">
+                <ul>
+                    <li>Use buttons or type in the display (Enter for =).</li>
+                    <li>ANS stores last answer.</li>
+                    <li>ANS does not work with &divide;r or fct.</li>
+                    <li>All brackets have to be closed.</li>
+                </ul>
+                <ul>
+                    <li>&divide;r is division with remainder.</li>
+                    <li>&divide;r only divides 2 integers.</li>
+                    <li>(5+3)&divide;r(6&times;5) is allowed but not 8&divide;r4&divide;r2.</li>
+                    <li>fct gives the factors of an integer.</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Created by: Abdul Mukit. &copy; 2021-2022</p>
+    </footer>
+    <script src="./calculator.js"></script>
+</body>
+
+</html>
